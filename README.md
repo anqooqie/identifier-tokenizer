@@ -1,4 +1,7 @@
 # identifier-tokenizer
+
+[![Build Status](https://travis-ci.org/anqooqie/identifier-tokenizer.svg)](https://travis-ci.org/anqooqie/identifier-tokenizer)
+
 A simple tokenizer for identifier names
 
 ## Usage
