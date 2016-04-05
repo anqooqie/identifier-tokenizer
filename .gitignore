@@ -1,2 +1,5 @@
 /bin/
+/local/
+/tmp/*
+!/tmp/.gitkeep
 /identifier-tokenizer.jar
