@@ -12,9 +12,13 @@ A simple tokenizer for identifier names
     JDBCTest
     SSL2TransmissionImplVersion4
     KDE_IdentifierTokenizer
+    123InvalidClassName
+    NotASCIIなClassName
 
 ## Example of Output
     Doubly	Linked	List
     JDBC	Test
     SSL2	Transmission	Impl	Version4
     KDE	Identifier	Tokenizer
+    N/A
+    N/A

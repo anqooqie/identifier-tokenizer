@@ -1,13 +1,20 @@
 package jp.ac.tsukuba.cs.kde.hfukuda.tokenizer;
 
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public final class IdentifierTokenizer {
-	private IdentifierTokenizer() {}
+public class IdentifierTokenizer {
+	public IdentifierTokenizer() {}
 
-	public static List<String> tokenize(final String identifier) {
+	private static final Pattern IS_VALID_ASCII_NAME = Pattern.compile("^[A-Za-z_][0-9A-Za-z_]*$");
+	public boolean canTokenize(final String identifier) {
+		return IS_VALID_ASCII_NAME.matcher(identifier).find();
+	}
+	public List<String> tokenize(final String identifier) {
+		if (!this.canTokenize(identifier)) throw new IllegalArgumentException("Not valid ASCII name: " + identifier);
+
 		return Stream.of(identifier.split("_+"))
 				.filter(underscoreSeparated -> !underscoreSeparated.isEmpty())
 				.flatMap(underscoreSeparated -> {
