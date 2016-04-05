@@ -6,6 +6,10 @@ bin: $(shell find src -name '*.java')
 identifier-tokenizer.jar: bin
 	jar cf '$@' -C '$<' .
 
+.PHONY: test
+test:
+	test/run.bats
+
 .PHONY: clean
 clean:
 	git clean -X -d -f

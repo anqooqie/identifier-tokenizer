@@ -1,0 +1,12 @@
+sudo: false
+language: c
+before_install:
+  - git clone 'https://github.com/sstephenson/bats.git' /tmp/bats
+  - cd /tmp/bats
+  - ./install.sh ~
+  - cd ~/build/anqooqie/identifier-tokenizer
+install:
+  - jdk_switcher use oraclejdk8
+  - make
+script:
+  - make test
