@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 task() {
-  java -cp bin jp.ac.tsukuba.cs.kde.hfukuda.tokenizer.Main 2>/dev/null | sed 's/\r//g'
+  java -cp bin jp.ac.tsukuba.cs.kde.hfukuda.tokenizer.Main | sed 's/\r$//g'
 }
 
 @test '不正な入力を弾く' {
