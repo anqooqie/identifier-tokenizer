@@ -1,5 +1,13 @@
-/bin/
-/local/
-/tmp/*
-!/tmp/.gitkeep
-/identifier-tokenizer.jar
+### https://raw.github.com/github/gitignore/785989be7eab6f2ac69b39a9ac6e44e347ce4f97/Maven.gitignore
+
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+

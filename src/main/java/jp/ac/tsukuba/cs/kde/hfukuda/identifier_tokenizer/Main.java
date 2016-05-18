@@ -1,4 +1,4 @@
-package jp.ac.tsukuba.cs.kde.hfukuda.tokenizer;
+package jp.ac.tsukuba.cs.kde.hfukuda.identifier_tokenizer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public final class Main {
 			String line;
 			while ((line = br.readLine()) != null) {
 				if (!tokenizer.canTokenize(line)) {
-					System.out.println("N/A");
+					System.out.println();
 					continue;
 				}
 				System.out.println(String.join("\t", tokenizer.tokenize(line)));

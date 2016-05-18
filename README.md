@@ -7,8 +7,8 @@ A simple tokenizer for identifier names
 ## Usage
     git clone https://github.com/anqooqie/identifier-tokenizer.git
     cd identifier-tokenizer
-    make
-    java -cp bin jp.ac.tsukuba.cs.kde.hfukuda.tokenizer.Main <input >output
+    mvn compile package dependency:copy-dependencies
+    java -jar target/identifier-tokenizer-"$(mvn help:evaluate -Dexpression=project.version | grep -v INFO)".jar <input >output
 
 ## Example of Input
     DoublyLinkedList
@@ -16,6 +16,7 @@ A simple tokenizer for identifier names
     SSL2TransmissionImplVersion4
     KDE_IdentifierTokenizer
     123InvalidIdentifierName
+    IdentifierNameContaining$
     NotASCIIなIdentifierName
 
 ## Example of Output
@@ -23,5 +24,6 @@ A simple tokenizer for identifier names
     JDBC	Test
     SSL2	Transmission	Impl	Version4
     KDE	Identifier	Tokenizer
-    N/A
-    N/A
+    
+    
+    

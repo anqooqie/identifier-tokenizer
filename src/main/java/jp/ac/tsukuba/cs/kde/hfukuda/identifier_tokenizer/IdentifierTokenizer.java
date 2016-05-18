@@ -1,4 +1,4 @@
-package jp.ac.tsukuba.cs.kde.hfukuda.tokenizer;
+package jp.ac.tsukuba.cs.kde.hfukuda.identifier_tokenizer;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -13,7 +13,7 @@ public class IdentifierTokenizer {
 		return IS_VALID_ASCII_NAME.matcher(identifier).find();
 	}
 	public List<String> tokenize(final String identifier) {
-		if (!this.canTokenize(identifier)) throw new IllegalArgumentException("Not valid ASCII name: " + identifier);
+		if (!this.canTokenize(identifier)) throw new IllegalArgumentException("Invalid ASCII name: " + identifier);
 
 		return Stream.of(identifier.split("_+"))
 				.filter(underscoreSeparated -> !underscoreSeparated.isEmpty())
