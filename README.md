@@ -5,10 +5,12 @@
 A simple tokenizer for identifier names
 
 ## Usage
-    git clone https://github.com/anqooqie/identifier-tokenizer.git
-    cd identifier-tokenizer
-    mvn compile package dependency:copy-dependencies
-    java -jar target/identifier-tokenizer-"$(mvn help:evaluate -Dexpression=project.version | grep -v INFO)".jar <input >output
+```bash
+git clone https://github.com/anqooqie/identifier-tokenizer.git
+cd identifier-tokenizer
+mvn compile package dependency:copy-dependencies
+java -jar target/identifier-tokenizer-"$(mvn help:evaluate -Dexpression=project.version | grep -v INFO)".jar <input >output
+```
 
 ## Example of Input
     DoublyLinkedList
